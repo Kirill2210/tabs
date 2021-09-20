@@ -1,0 +1,56 @@
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+body {
+	background-color: #333;
+}
+.tabs {
+	padding: 15px;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	margin: 20px 0;
+	color: orange;
+	font-size: 0;
+}
+.title {
+	font-size: 24px;
+	margin-bottom: 15px;
+}
+.tabs-btn {
+	background-color: #fff;
+	border: 1px solid #000;
+	cursor: pointer;
+	padding: 10px;
+	margin: 0;
+	font-size: 18px;
+	transition: all .5s;
+	border-radius: 5px;
+}
+.tabs-btn + .tabs-btn {
+	margin-left: 10px;
+}
+.tabs-btn.active {
+	background-color: #7FCD91;
+}
+.tabs-item {
+	display: none;
+	font-size: 20px;
+	margin-top: 20px;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: #F5EAEA;
+}
+.tabs-item.active {
+	display: block;
+	animation-name: tabs;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+@keyframes tabs {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
